@@ -1,7 +1,50 @@
+mkdir ecert
+cd ecert
+truffle init
+rename truffle.js truffle.js.old  // windows only
+#truffle-config.js  // for windows, unix bez -config
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*", // Match any network id
+    }
+  }
 
+git add .   // all files
+git commit -m "initial"
+git remote add origin https://github.com/rwoj/ecert.git
+git push -u origin master
 
+#.gitignore // 
+/client/node_modules
 
+#contracts // add contracts tested in Remix
+#2_deploy_contracts.js
+var xxxContract = artifacts.require("./xxxContract.sol");
 
+module.exports = function(deployer) {
+  deployer.deploy(xxxContract);
+};
+
+#Truffle compile/migrate
+truffle compile
+truffle migrate 
+//truffle migrate --reset
+
+// create symlink - act as file/folder is there
+# For MacOS and Linux
+cd src
+ln -s ../../build/contracts contracts
+# For Windows 7, 8 and 10
+# Using a Command Prompt as Admin
+cd src
+mklink /D contracts ..\..\build\contracts
+
+create-react-app client
+cd client
+yarn add web3
+#client/utils/getWeb3.js
 
 
 
