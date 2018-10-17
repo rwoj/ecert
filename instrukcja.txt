@@ -45,8 +45,8 @@ create-react-app client
 cd client
 yarn add web3
 #client/utils/getWeb3.js
-
-
+#App.js changes
+#components/containers
 
 
 

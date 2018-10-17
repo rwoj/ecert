@@ -31,11 +31,12 @@ contract Certificate is ERC20Interface{
     event Transfer(address indexed _from, address indexed _to, uint _quantity);
 
 
-    constructor(address _owner, uint _quantity) public{
+    constructor(address _owner, uint _quantity, string _descr, uint _liczba) public{
         quantity = _quantity;
         owner = _owner;
+        certificateDetails.description = _descr;
+        certificateDetails.liczba = _liczba;
         balances[owner] = quantity;
-        
     }
     
     modifier onlyOwner(){
@@ -45,11 +46,11 @@ contract Certificate is ERC20Interface{
         _;
     } 
 
-    function enterCertificateDetails(string _description, uint _liczba) public onlyOwner returns (bool success){
-        certificateDetails.description = _description;
-        certificateDetails.liczba = _liczba;
-        return true;
-    }    
+    // function enterCertificateDetails(string _description, uint _liczba) public onlyOwner returns (bool success){
+    //     certificateDetails.description = _description;
+    //     certificateDetails.liczba = _liczba;
+    //     return true;
+    // }    
     
     function getCerfificateDetails() public view returns(string description, uint liczba ){
         return (certificateDetails.description, certificateDetails.liczba);
