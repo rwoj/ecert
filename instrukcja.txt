@@ -1,3 +1,19 @@
+1. start ganache
+2. setup ganache localhost/7545
+3. truffle 
+ C:\Users\radoslaw.wojdowski\AppData\Roaming\npm\truffle compile
+ C:\Users\radoslaw.wojdowski\AppData\Roaming\npm\truffle migrate --network ganache --reset
+4. change contract in Apps
+5. cd client
+  npm start
+6. play
+
+7. contracts/remix
+
+
+
+
+
 mkdir ecert
 cd ecert
 truffle init
@@ -51,9 +67,9 @@ yarn add web3
 
 
 
+C:\Users\radoslaw.wojdowski\AppData\Roaming\npm\ganache-cli
 
-
-
+C:\Users\radoslaw.wojdowski\AppData\Roaming\npm\truffle
 
 
 

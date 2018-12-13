@@ -85,9 +85,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.4.24;\r\n\r\n// ----------------------------------------------------------------------------\r\n// ERC Token Standard #20 Interface\r\n// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md\r\n// ----------------------------------------------------------------------------\r\ncontract ERC20Interface {\r\n    function totalSupply() public view returns (uint);\r\n    function balanceOf(address tokenOwner) public view returns (uint balance);\r\n    function transfer(address to, uint tokens) public returns (bool success);\r\n\r\n    event Transfer(address indexed from, address indexed to, uint tokens);\r\n    \r\n    //function allowance(address tokenOwner, address spender) public view returns (uint remaining);\r\n    //function approve(address spender, uint tokens) public returns (bool success);\r\n    //function transferFrom(address from, address to, uint tokens) public returns (bool success);\r\n    //event Approval(address indexed tokenOwner, address indexed spender, uint tokens);\r\n}\r\n\r\ncontract Certificate is ERC20Interface{\r\n    address public owner;\r\n    uint public quantity;\r\n    mapping(address => uint) public balances;\r\n    \r\n    struct CertificateDetails {\r\n        string description;\r\n        uint liczba;\r\n    }\r\n    CertificateDetails public certificateDetails;\r\n      \r\n    event Transfer(address indexed _from, address indexed _to, uint _quantity);\r\n\r\n\r\n    constructor(address _owner, uint _quantity, string _descr, uint _liczba) public{\r\n        quantity = _quantity;\r\n        owner = _owner;\r\n        certificateDetails.description = _descr;\r\n        certificateDetails.liczba = _liczba;\r\n        balances[owner] = quantity;\r\n    }\r\n    \r\n    modifier onlyOwner(){\r\n        require(\r\n            msg.sender == owner, \r\n            \"Sender not authorized\");\r\n        _;\r\n    } \r\n\r\n    // function enterCertificateDetails(string _description, uint _liczba) public onlyOwner returns (bool success){\r\n    //     certificateDetails.description = _description;\r\n    //     certificateDetails.liczba = _liczba;\r\n    //     return true;\r\n    // }    \r\n    \r\n    function getCerfificateDetails() public view returns(string description, uint liczba ){\r\n        return (certificateDetails.description, certificateDetails.liczba);\r\n    }\r\n    \r\n    function totalSupply() public view returns (uint){\r\n        return quantity;\r\n    }\r\n    \r\n    function balanceOf(address _owner) public view returns (uint _ownerBalance){\r\n        return balances[_owner];\r\n    }\r\n     \r\n     \r\n    //transfer from the owner balance to another address\r\n    function transfer(address to, uint _quantity) public returns (bool success){\r\n        require(\r\n            balances[msg.sender] >= _quantity && _quantity > 0, \r\n            \"wrong quantity\");\r\n         \r\n        balances[to] += _quantity;\r\n        balances[msg.sender] -= _quantity;\r\n         \r\n        emit Transfer(msg.sender, to, _quantity);\r\n         \r\n        return true;\r\n    }\r\n}",
-  "sourcePath": "E:\\BC\\ecert\\contracts\\Certificate.sol",
+  "sourcePath": "C:\\nodes\\ecert\\contracts\\Certificate.sol",
   "ast": {
-    "absolutePath": "/E/BC/ecert/contracts/Certificate.sol",
+    "absolutePath": "/C/nodes/ecert/contracts/Certificate.sol",
     "exportedSymbols": {
       "Certificate": [
         187
@@ -1248,7 +1248,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 257,
+                            "referencedDeclaration": 314,
                             "src": "1739:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1324,10 +1324,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        260,
-                        261
+                        317,
+                        318
                       ],
-                      "referencedDeclaration": 261,
+                      "referencedDeclaration": 318,
                       "src": "1717:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1813,7 +1813,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 257,
+                                "referencedDeclaration": 314,
                                 "src": "2687:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1958,10 +1958,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        260,
-                        261
+                        317,
+                        318
                       ],
-                      "referencedDeclaration": 261,
+                      "referencedDeclaration": 318,
                       "src": "2656:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2091,7 +2091,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 257,
+                          "referencedDeclaration": 314,
                           "src": "2828:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2160,7 +2160,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 257,
+                          "referencedDeclaration": 314,
                           "src": "2888:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2395,7 +2395,7 @@
     "src": "0:2958:0"
   },
   "legacyAST": {
-    "absolutePath": "/E/BC/ecert/contracts/Certificate.sol",
+    "absolutePath": "/C/nodes/ecert/contracts/Certificate.sol",
     "exportedSymbols": {
       "Certificate": [
         187
@@ -3556,7 +3556,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 257,
+                            "referencedDeclaration": 314,
                             "src": "1739:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -3632,10 +3632,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        260,
-                        261
+                        317,
+                        318
                       ],
-                      "referencedDeclaration": 261,
+                      "referencedDeclaration": 318,
                       "src": "1717:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4121,7 +4121,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 257,
+                                "referencedDeclaration": 314,
                                 "src": "2687:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -4266,10 +4266,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        260,
-                        261
+                        317,
+                        318
                       ],
-                      "referencedDeclaration": 261,
+                      "referencedDeclaration": 318,
                       "src": "2656:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4399,7 +4399,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 257,
+                          "referencedDeclaration": 314,
                           "src": "2828:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4468,7 +4468,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 257,
+                          "referencedDeclaration": 314,
                           "src": "2888:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4708,5 +4708,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-17T20:54:37.766Z"
+  "updatedAt": "2018-10-18T12:16:07.006Z"
 }
