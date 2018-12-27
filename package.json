@@ -1,0 +1,23 @@
+{
+  "name": "ecert",
+  "version": "1.0.0",
+  "description": "certificates",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rwoj",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "solidity-coverage": "^0.5.11",
+    "truffle": "^5.0.0",
+    "truffle-contract": "^4.0.0",
+    "truffle-hdwallet-provider": "^1.0.1"
+  }
+}

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 // ----------------------------------------------------------------------------
 // ERC Token Standard #20 Interface
@@ -31,7 +31,7 @@ contract Certificate is ERC20Interface{
     event Transfer(address indexed _from, address indexed _to, uint _quantity);
 
 
-    constructor(address _owner, uint _quantity, string _descr, uint _liczba) public{
+    constructor(address _owner, uint _quantity, string memory _descr, uint _liczba) public{
         quantity = _quantity;
         owner = _owner;
         certificateDetails.description = _descr;
@@ -52,7 +52,7 @@ contract Certificate is ERC20Interface{
     //     return true;
     // }    
     
-    function getCerfificateDetails() public view returns(string description, uint liczba ){
+    function getCerfificateDetails() public view returns(string memory description, uint liczba ){
         return (certificateDetails.description, certificateDetails.liczba);
     }
     
