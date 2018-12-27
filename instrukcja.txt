@@ -11,9 +11,6 @@
 7. contracts/remix
 
 
-
-
-
 mkdir ecert
 cd ecert
 truffle init
