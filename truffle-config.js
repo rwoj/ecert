@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   networks: {
     ganache: {
@@ -10,5 +12,6 @@ module.exports = {
     //   port: 8545,
     //   network_id: "*", // Match any network id
     // }, 
-  }
+  }, 
+  contracts_build_directory: path.join(__dirname, "client/src/contracts")
 };

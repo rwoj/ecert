@@ -1381,60 +1381,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xa33872B3Ccd864211dB332bE71E49f922e8aCF00",
-      "transactionHash": "0xf922ec6777d4426049912e7a10d2b381d34d1e0f99a7acc5b9504621dc35f68b"
-    },
-    "1539721211750": {
-      "events": {},
-      "links": {},
-      "address": "0x22c9d2e66705c533aec5dbbe61971b4be6a0fd9d",
-      "transactionHash": "0x184f25f50ec75ee00973dee525a7c9de9938999e6e36822e99f3481391b71a6e"
-    },
-    "1539801705160": {
-      "events": {},
-      "links": {},
-      "address": "0x666206738c36039bed95da8ec286954ac7be4b84",
-      "transactionHash": "0x184f25f50ec75ee00973dee525a7c9de9938999e6e36822e99f3481391b71a6e"
-    },
-    "1539807825725": {
-      "events": {},
-      "links": {},
-      "address": "0xe87e75f5431bb430f9bf372e5d83c55a2277f9fd",
-      "transactionHash": "0x184f25f50ec75ee00973dee525a7c9de9938999e6e36822e99f3481391b71a6e"
-    },
-    "1539808720892": {
-      "events": {},
-      "links": {},
-      "address": "0xa9cf343f1492687f568f216e5863cda46acd1b83",
-      "transactionHash": "0x184f25f50ec75ee00973dee525a7c9de9938999e6e36822e99f3481391b71a6e"
-    },
-    "1539809185482": {
-      "events": {},
-      "links": {},
-      "address": "0x3b43cb44dd3c2425aded0a88106c8138614dd96a",
-      "transactionHash": "0x184f25f50ec75ee00973dee525a7c9de9938999e6e36822e99f3481391b71a6e"
-    },
-    "1539809667809": {
-      "events": {},
-      "links": {},
-      "address": "0x84a9467791587cf11c0d62379ec4962b3cd1f349",
-      "transactionHash": "0x184f25f50ec75ee00973dee525a7c9de9938999e6e36822e99f3481391b71a6e"
-    },
-    "1539864848222": {
-      "events": {},
-      "links": {},
-      "address": "0xc9d0cf8d3a1553187ec63a03cb979d61aaf52409",
-      "transactionHash": "0x4db39f2fb905ad9e40141dbd6903c7b518c03a641f5b82cb398e30617b8082af"
-    },
-    "1542816044618": {
-      "events": {},
-      "links": {},
-      "address": "0xaec33d2426e26f87dcf67a462081ed2731256a8b",
-      "transactionHash": "0x4db39f2fb905ad9e40141dbd6903c7b518c03a641f5b82cb398e30617b8082af"
+      "address": "0xE6ab55aA84bf7f122e2347519883c022A4dE2AB3",
+      "transactionHash": "0xa8e48422e26b85c3e60b4ec2d6b0bbd314848237fe3ea4592beb3729cbcd75b4"
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2018-12-27T12:41:18.837Z",
+  "updatedAt": "2019-01-01T14:00:54.066Z",
   "devdoc": {
     "methods": {}
   },
